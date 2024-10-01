@@ -11,7 +11,7 @@ console.log("Telegram Bot Token:", Token); // Check token
 const bot = new TelegramBot(Token, { polling: true });
 
 bot.on('message', (msg) => {
-  bot.sendMessage(msg.chat.id, "If you want to use Gemini Ai then use /Gemini then text else Please few sec ...");
+  bot.sendMessage(msg.chat.id, "If you want to use Gemini Ai then use this : /Gemini then text OR else Please few sec ...");
 });
 
 bot.onText(/\/Gemini/, async (msg) => {

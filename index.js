@@ -29,7 +29,7 @@ async function GeminiResponse(text) {
 }
 
 // just for a port 
-const express = require('express');
+import express  from 'express';
 const app = express();
 
 const PORT = 3000;

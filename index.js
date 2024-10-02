@@ -11,7 +11,7 @@ console.log("Telegram Bot Token:", Token); // Check token
 const bot = new TelegramBot(Token, { polling: true });
 
 bot.on('message', (msg) => {
-  bot.sendMessage(msg.chat.id, "If you want to use Gemini Ai then use this : /Gemini then text OR else Please few sec ...");
+  bot.sendMessage(msg.chat.id, "If you want to use Gemini Ai then use this : /Gemini then text OR else Please wait few sec ...");
 });
 
 bot.onText(/\/Gemini/, async (msg) => {
@@ -28,3 +28,13 @@ async function GeminiResponse(text) {
   return response
 }
 
+// just for a port 
+const express = require('express');
+const app = express();
+
+const PORT = 3000;
+
+// Keep your service alive by listening on the port
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
